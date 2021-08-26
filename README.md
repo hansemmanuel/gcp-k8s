@@ -36,4 +36,8 @@ It will create K8s cluster on nodes defined in inventory. By default it will dep
 
 **How to deploy more nodes and clusters**
 
+Number of worker nodes in a k8s cluster can be adjusted by adding more compute resource in terraform main.tf and editing the resource "local_file" "ansible_inventory" block and 'inventory.tmpl' file respectively.
+
 Some times we need to deploy more than one K8s cluster at the same time for testing something like consul service mesh across multiple k8 clusters . Terraform main.tf can be easily extended to achieve the same. An example tf file  'main_two_k8s_clusters.tf.example'   added into the repo as an example. In this case there will be two ansible inventory files will be created and need to run play with each of them separately .
+
+
