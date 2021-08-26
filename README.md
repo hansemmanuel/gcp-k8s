@@ -20,7 +20,7 @@ Finally apply it
 
 Verify if all GCP resources are deployed successfully
 
-Then verify ansible folder have correct inventory file 'k8s-cluster1-inventory'  get created by terraform.
+Then verify ansible folder have correct inventory file 'k8s-cluster1-inventory'  get auto generated  by terraform.
 if all good, run the ansible play.  Ansible role used to install kubernetes cluster is derived from here https://github.com/geerlingguy/ansible-role-kubernetes with minimal changes. So many modification can be done via vars as per the requirement.
 
 install the dependency
