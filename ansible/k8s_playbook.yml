@@ -1,0 +1,12 @@
+- hosts: all
+
+  vars:
+    kubernetes_allow_pods_on_master: true
+    kubernetes_pod_network:
+      cni: 'calico'
+      cidr: '172.16.0.0/16'
+    kubernetes_enable_web_ui: false
+
+  roles:
+    - geerlingguy.docker
+    - roles/ansible-role-kubernetes

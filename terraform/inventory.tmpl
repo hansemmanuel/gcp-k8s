@@ -1,0 +1,21 @@
+[managers]
+kube1-manager ansible_host=${manager_ip}
+
+[workers]
+kube1-worker ansible_host=${worker_ip}
+
+[nodes:children]
+managers
+workers
+
+[managers:vars]
+kubernetes_role=master
+
+
+[workers:vars]
+kubernetes_role=node
+
+[nodes:vars]
+ansible_user=hansemmanuel
+ansible_ssh_private_key_file=${ssh_private_key}
+ansible_become=True

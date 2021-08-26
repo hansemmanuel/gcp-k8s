@@ -1,0 +1,36 @@
+variable "project_name" {
+  description = "The name of GCP project"
+  default     = "give the name of ur GCP project here"
+}
+
+variable "region" {
+  description = "The name of GCP region"
+  default     = "asia-southeast1"
+}
+
+
+variable "kube1_subnet" {
+  description = "The subnet for kube1 cluster nodes"
+  default     = "10.0.100.0/24"
+}
+
+variable "kube2_subnet" {
+  description = "The subnet for kube2 cluster nodes"
+  default     = "10.0.200.0/24"
+}
+
+variable "ssh_public_key_path" {
+  description = "Path for ssh public key"
+  default = "id_rsa.pub path"
+}
+
+variable "ssh_private_key_path" {
+  description = "Path for ssh private key"
+  default = "id_rsa path"
+}
+
+variable "ssh_user" {
+  description = "username for ssh"
+  default = "ubuntu"
+}
+
