@@ -1,0 +1,16 @@
+- name: downloading calicoctl
+  become: yes
+  become_user: root
+  get_url:
+    url: 'https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-linux-amd64'
+    dest: "/usr/src/calicoctl"
+    mode: 0755
+    checksum: "sha256:5a1462e3d9c5bc3142b14788b5be427fae962863397a0176241afad02308f1a2"
+
+- name: linking calicoctl
+  become: yes
+  become_user: root
+  file:
+    src: "/usr/src/calicoctl"
+    dest: "/usr/local/bin/calicoctl"
+    state: link

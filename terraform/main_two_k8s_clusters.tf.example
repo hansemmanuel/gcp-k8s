@@ -210,7 +210,7 @@ resource "google_compute_instance_from_template" "kube2-worker" {
      ssh_user = "${var.ssh_user}"
     }
   )
-  filename = "k8s-cluster1-inventory"
+  filename = "../ansible/k8s-cluster1-inventory"
 }
 
  resource "local_file" "k8s-cluster2-ansible_inventory" {
@@ -222,5 +222,5 @@ resource "google_compute_instance_from_template" "kube2-worker" {
      ssh_user = "${var.ssh_user}"
     }
   )
-  filename = "k8s-cluster2-inventory"
+  filename = "../ansible/k8s-cluster2-inventory"
 }
