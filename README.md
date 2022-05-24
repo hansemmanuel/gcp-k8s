@@ -3,6 +3,8 @@ Repository contains terraform scripts to quickly deploy k8s manager node and wor
 
 The purpose of these terraform and ansible scripts are to quickly deploy a self managed kubernetes cluster in GCP for testing purpose. The terraform and ansible scripts can easily extended to deploy multiple K8s cluster.  By default it will setup a K8s cluster with single master node and a single worker node.
 
+First create a GCP service account for terrafrom. Follow this doc for setup GCP serviceaccount credentials for terraform https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build
+
 **How to run**
 
 First get into folder 'terraform'. and copy  'variables.tf.example'   as 'variables.tf'.  define the variables as per your environment .
